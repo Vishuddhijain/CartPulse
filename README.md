@@ -172,7 +172,7 @@ Visit 👉 [http://localhost:3000](http://localhost:3000)
 7. Chat with delivery partner (AI-assisted)
 8. Reorder from history
 
-![Customer Home](src/assets/customer-home.png)
+![Customer Home](cartpulse/src/assets/customer-home.png)
 
 ---
 
@@ -186,7 +186,7 @@ Visit 👉 [http://localhost:3000](http://localhost:3000)
 6. Verify OTP
 7. Track earnings
 
-![Delivery Dashboard](src/assets/deliveryboy-dashboard.png)
+![Delivery Dashboard](cartpulse/src/assets/deliveryboy-dashboard.png)
 
 ---
 
@@ -197,7 +197,7 @@ Visit 👉 [http://localhost:3000](http://localhost:3000)
 3. Monitor all orders
 4. Analyze platform performance
 
-![Admin Dashboard](src/assets/admin-dashboard.png)
+![Admin Dashboard](cartpulse/src/assets/admin-dashboard.png)
 
 ---
 
@@ -206,15 +206,15 @@ Visit 👉 [http://localhost:3000](http://localhost:3000)
 ### 🔑 Authentication
 
 * Google OAuth Signup
-  ![Auth](src/assets/auth-login.png)
+  ![Auth](cartpulse/src/assets/auth-login.png)
 
 ### 🛍️ Customer Flow
 
 * Cart Page
-  ![Cart](src/assets/cart.png)
+  ![Cart](cartpulse/src/assets/cart.png)
 
 * Checkout & Live Tracking
-  ![Tracking](src/assets/live-tracking.png)
+  ![Tracking](cartpulse/src/assets/live-tracking.png)
 
 ---
 
