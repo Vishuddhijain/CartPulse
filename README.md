@@ -14,6 +14,7 @@
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-Images-blue?logo=cloudinary)
 ![Google Maps](https://img.shields.io/badge/Maps-Google%20Maps-red?logo=google-maps)
 ![AI](https://img.shields.io/badge/AI-Gemini-orange)
+![Stripe](https://img.shields.io/badge/Payments-Stripe-635BFF?logo=stripe)
 
 **CartPulse** is a modern, full-stack grocery delivery application built with **Next.js 16 (App Router)** that delivers a seamless, real-time experience for **customers**, **delivery partners**, and **administrators**.
 
@@ -36,7 +37,6 @@ From browsing groceries to live delivery tracking on maps, CartPulse showcases h
 * 🧾 Order history with one-click reordering
 * 🔐 OTP-based email verification
 * 💬 Real-time chat with delivery partner + AI suggestions
-
 ---
 
 ### 🚚 Delivery Partner Dashboard
@@ -61,13 +61,29 @@ From browsing groceries to live delivery tracking on maps, CartPulse showcases h
 
 ---
 
+## 💳 Payments (Stripe & Cash on Delivery)
+
+* 💳 **Stripe-hosted secure checkout** for online payments
+* 🧾 Automatic payment intent creation (Stripe)
+* 📦 Payments linked directly to order lifecycle
+* 🔁 Webhook-based order updates (Stripe)
+* ❌ Failed / canceled payment handling
+* ✅ Order confirmation only after successful payment
+* 💵 **Cash on Delivery (COD)** option for eligible orders
+* 🔐 OTP-based order verification for COD deliveries
+* 🚫 Fraud prevention via delivery-time OTP validation
+
+---
+
 ## 🔐 Authentication & Security
 
 * 🔑 NextAuth.js with JWT sessions
 * 👥 Role-based access (Customer / Delivery / Admin)
 * 🔐 Google OAuth login
 * 📩 Email OTP verification
-* 🛡️ Middleware-based protected routes
+* 🛡️ Middleware enforces role-based routing at server level
+* 🧑‍💻 Unauthorized users are redirected automatically
+* 👥 Admin and Delivery routes are fully isolated
 
 ---
 
@@ -80,6 +96,13 @@ From browsing groceries to live delivery tracking on maps, CartPulse showcases h
 
 ---
 
+## 🤖 AI Capabilities (Gemini)
+
+* Smart delivery suggestions during chat
+* Order context–aware responses
+* Customer support assistance
+* Prompt-based recommendation logic
+
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -90,7 +113,7 @@ From browsing groceries to live delivery tracking on maps, CartPulse showcases h
 * **Framer Motion**
 * **Lucide React**
 * **React Leaflet & Google Maps API**
-
+  
 ### Backend
 
 * **Node.js**
@@ -100,6 +123,8 @@ From browsing groceries to live delivery tracking on maps, CartPulse showcases h
 * **Cloudinary**
 * **Nodemailer**
 * **Google Gemini AI**
+* **Stripe API**
+* **Webhook-ready architecture**
 
 ### Dev Tools
 
@@ -147,7 +172,21 @@ EMAIL=
 PASS=
 
 GEMINI_API_KEY=
+
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+
 ```
+
+## 🧪 Stripe Test Payments
+
+Use the following test card in development:
+
+Card Number: `4242 4242 4242 4242`  
+Expiry: Any future date  
+CVV: Any 3 digits  
+
+> Test mode only — no real money is charged.
 
 ### Run Locally
 
@@ -205,7 +244,6 @@ Visit 👉 [http://localhost:3000](http://localhost:3000)
 
 ### 🔑 Authentication
 
-* Google OAuth Signup
   ![Auth](cartpulse/src/assets/auth-login.png)
 
 ### 🛍️ Customer Flow
